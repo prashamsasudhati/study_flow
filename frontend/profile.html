@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="View your StudyFlow profile.">
+  <title>Profile — StudyFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-mark">S</span><span>StudyFlow</span></a>
+      <p class="sidebar-caption">WORKSPACE</p>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-link" href="dashboard.html"><span class="nav-icon">⌂</span>Dashboard</a>
+        <a class="nav-link" href="tasks.html"><span class="nav-icon">☷</span>My Tasks</a>
+        <a class="nav-link" href="tasks.html#new"><span class="nav-icon">＋</span>Add New Task</a>
+        <a class="nav-link" href="calendar.html"><span class="nav-icon">▦</span>Calendar / Deadlines</a>
+        <a class="nav-link" href="progress.html"><span class="nav-icon">◒</span>Progress Overview</a>
+        <a class="nav-link" href="notifications.html"><span class="nav-icon">♧</span>Notifications<span class="nav-badge" data-notification-count hidden>0</span></a>
+        <a class="nav-link" href="profile.html"><span class="nav-icon">♙</span>Profile</a>
+        <button class="nav-link nav-button" type="button" data-logout><span class="nav-icon">⇥</span>Logout</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><strong>Small steps add up.</strong>Keep your plan simple and make time to recharge.</div>
+        <div class="sidebar-user"><span class="avatar" data-user-initials>?</span><div><div class="sidebar-user-name" data-user-name>Student</div><div class="sidebar-user-meta">Student account</div></div></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left"><button class="mobile-menu" data-mobile-menu aria-label="Open menu">☰</button><div class="breadcrumb">Workspace / <strong>Profile</strong></div></div>
+        <div class="topbar-actions"><button class="icon-button" data-notifications-link aria-label="View notifications">♧</button><button class="button button-secondary" data-logout>Log out</button></div>
+      </header>
+      <div class="page-content">
+        <section class="page-heading"><div><p class="eyebrow">YOUR ACCOUNT</p><h1>Profile</h1><p>Your StudyFlow account details.</p></div></section>
+        <div class="profile-layout">
+          <section class="form-panel">
+            <div class="profile-overview"><span class="avatar avatar-large" data-user-initials>?</span><div><h2 data-user-name>Student</h2><p class="muted" style="margin:5px 0 0;font-size:11px">Student account</p></div></div>
+            <div class="form-grid">
+              <div class="field"><label for="profile-name">Full name</label><input id="profile-name" readonly></div>
+              <div class="field"><label for="profile-email">Email address</label><input id="profile-email" type="email" readonly></div>
+              <div class="field full-width"><label>Account security</label><p class="muted" style="font-size:11px;line-height:1.6;margin:0">Your password is hashed before it is stored. Your sign-in token is kept in this browser session; use Log out to end the session.</p></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script src="js/app.js" defer></script>
+  <script src="js/profile.js" defer></script>
+</body>
+</html>

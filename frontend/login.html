@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in to your StudyFlow student planner.">
+  <title>Sign in — StudyFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <a class="brand auth-brand" href="login.html"><span class="brand-mark">S</span><span>StudyFlow</span></a>
+    <p class="eyebrow">WELCOME BACK</p>
+    <h1>Make today count.</h1>
+    <p class="muted">Sign in to pick up where you left off.</p>
+    <div class="preview-note">Sign in to securely access your tasks and deadlines.</div>
+    <form id="login-form" class="form-stack">
+      <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@school.edu" required></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required minlength="8"></label>
+      <button class="button button-primary button-wide" type="submit">Sign in</button>
+    </form>
+    <p class="auth-switch">New to StudyFlow? <a href="register.html">Create an account</a></p>
+  </main>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script src="js/app.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</body>
+</html>

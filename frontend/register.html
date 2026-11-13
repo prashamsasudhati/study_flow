@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create your StudyFlow student planner account.">
+  <title>Create account — StudyFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <a class="brand auth-brand" href="login.html"><span class="brand-mark">S</span><span>StudyFlow</span></a>
+    <p class="eyebrow">GET ORGANIZED</p>
+    <h1>Your semester, in sync.</h1>
+    <p class="muted">Create an account to plan your next big thing.</p>
+    <div class="preview-note">Your password is securely hashed before it is stored.</div>
+    <form id="register-form" class="form-stack">
+      <label>Full name<input name="name" type="text" autocomplete="name" placeholder="Alex Morgan" required minlength="2" maxlength="80"></label>
+      <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@school.edu" required></label>
+      <label>Password<input name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" required minlength="8"></label>
+      <button class="button button-primary button-wide" type="submit">Create account</button>
+    </form>
+    <p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+  </main>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script src="js/app.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</body>
+</html>

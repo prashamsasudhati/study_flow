@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Your StudyFlow student productivity dashboard.">
+  <title>Dashboard — StudyFlow</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-mark">S</span><span>StudyFlow</span></a>
+      <p class="sidebar-caption">WORKSPACE</p>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-link" href="dashboard.html"><span class="nav-icon">⌂</span>Dashboard</a>
+        <a class="nav-link" href="tasks.html"><span class="nav-icon">☷</span>My Tasks</a>
+        <a class="nav-link" href="tasks.html#new"><span class="nav-icon">＋</span>Add New Task</a>
+        <a class="nav-link" href="calendar.html"><span class="nav-icon">▦</span>Calendar / Deadlines</a>
+        <a class="nav-link" href="progress.html"><span class="nav-icon">◒</span>Progress Overview</a>
+        <a class="nav-link" href="notifications.html"><span class="nav-icon">♧</span>Notifications<span class="nav-badge" data-notification-count hidden>0</span></a>
+        <a class="nav-link" href="profile.html"><span class="nav-icon">♙</span>Profile</a>
+        <button class="nav-link nav-button" type="button" data-logout><span class="nav-icon">⇥</span>Logout</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><strong>Small steps add up.</strong>Keep your plan simple and make time to recharge.</div>
+        <div class="sidebar-user"><span class="avatar" data-user-initials>AM</span><div><div class="sidebar-user-name" data-user-name>Alex Morgan</div><div class="sidebar-user-meta">Preview account</div></div></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div class="topbar-left"><button class="mobile-menu" data-mobile-menu aria-label="Open menu">☰</button><div class="breadcrumb">Workspace / <strong>Dashboard</strong></div></div><div class="topbar-actions"><button class="icon-button" data-notifications-link aria-label="View notifications">♧<span class="notification-dot"></span></button><a class="profile-button" href="profile.html"><span class="avatar" data-user-initials>AM</span><span data-user-name>Alex Morgan</span></a></div></header>
+      <div class="preview-banner">Preview mode — sample tasks are saved in this browser only. Secure accounts, API, and MongoDB are not connected yet.</div>
+      <div class="page-content">
+        <section class="page-heading"><div><p class="eyebrow" id="today-label">YOUR STUDY SPACE</p><h1>Good morning, <span data-user-first-name>Alex</span> 👋</h1><p>Here’s what’s happening with your work today.</p></div><div class="heading-actions"><a class="button button-primary" href="tasks.html#new">＋ Add a task</a></div></section>
+        <section class="stat-grid" aria-label="Task statistics">
+          <article class="stat-card"><div class="stat-top"><span>Total tasks</span><span class="stat-icon">☷</span></div><div class="stat-value" id="stat-total">0</div><div class="stat-caption">Across all your subjects</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Pending</span><span class="stat-icon amber">◷</span></div><div class="stat-value" id="stat-pending">0</div><div class="stat-caption">Ready for your attention</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Completed</span><span class="stat-icon green">✓</span></div><div class="stat-value" id="stat-completed">0</div><div class="stat-caption">Nice work, keep going</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Overdue</span><span class="stat-icon red">!</span></div><div class="stat-value" id="stat-overdue">0</div><div class="stat-caption">Take another look</div></article>
+        </section>
+        <section class="content-grid">
+          <article class="panel"><div class="section-heading"><div><h2>Recent tasks</h2><p>Your latest assignments and projects</p></div><a class="text-link" href="tasks.html">View all →</a></div><div class="task-list" id="recent-tasks"></div></article>
+          <article class="panel"><div class="section-heading"><div><h2>Coming up</h2><p>Deadlines that need your attention</p></div><a class="text-link" href="calendar.html">Calendar →</a></div><div class="deadline-list" id="upcoming-deadlines"></div></article>
+        </section>
+        <section class="content-grid">
+          <article class="panel"><div class="section-heading"><div><h2>Today’s focus</h2><p>Tasks due today</p></div><span class="status-pill status-in-progress" id="due-today-count">0 today</span></div><div id="today-tasks" class="task-list"></div></article>
+          <article class="panel"><div class="section-heading"><div><h2>Your progress</h2><p>Completed tasks across your plan</p></div><a class="text-link" href="progress.html">Details →</a></div><div class="progress-summary"><strong id="progress-value">0%</strong><span id="progress-caption">0 of 0 tasks complete</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div></article>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div><script src="js/app.js" defer></script><script src="js/dashboard.js" defer></script>
+</body>
+</html>
